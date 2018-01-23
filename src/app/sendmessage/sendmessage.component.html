@@ -1,3 +1,9 @@
-<p>
-  sendmessage works!
-</p>
+<div class="row">
+    <div class="form-group col-md-8">
+      <input type="text" [(ngModel)]="message" (keydown)="SendMessageOnEnter($event)" class="form-control" />
+    </div>
+    <div class="col-md-1">
+      <button class="btn btn-primary" (click)="SendMessage()">Send</button>
+    </div>
+</div>
+

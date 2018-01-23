@@ -1,5 +1,5 @@
-<p>
-  feeds works!
-</p>
-<app-message></app-message>
-<app-sendmessage></app-sendmessage>
+<div class="col-md-10">
+  <div *ngFor="let message of feed | async" class="col-md-8 well">
+    <app-message [chatMessage]="message"></app-message>
+  </div>
+</div>

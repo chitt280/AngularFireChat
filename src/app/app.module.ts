@@ -6,6 +6,9 @@ import {AngularFireModule} from 'angularfire2'
 import {AngularFireDatabaseModule} from 'angularfire2/database'
 import {AngularFireAuthModule} from 'angularfire2/auth'
 
+import { FormsModule } from '@angular/forms';
+
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -43,6 +46,7 @@ const routes:Route[]=[
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
