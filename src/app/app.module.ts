@@ -23,9 +23,9 @@ import {environment} from '../environments/environment'
 
 import {ChartService} from '../services/chat.service'
 import {AuthService} from '../services/auth.service'
-
+import {AuthGuard} from '../services/authguard.service'
 const routes:Route[]=[
-  {path:'chat',component:ChatComponent},
+  {path:'chat',component:ChatComponent,canActivate :[AuthGuard] },
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'',redirectTo:'chat',pathMatch:'full'}
@@ -52,7 +52,7 @@ const routes:Route[]=[
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
-  providers: [ChartService,AuthService],
+  providers: [ChartService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

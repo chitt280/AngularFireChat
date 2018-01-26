@@ -6,11 +6,5 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyAE2ynVY4UsGtMoLdhwaifsRoI9jnz5UBg",
-    authDomain: "chatapp-77002.firebaseapp.com",
-    databaseURL: "https://chatapp-77002.firebaseio.com",
-    projectId: "chatapp-77002",
-    storageBucket: "chatapp-77002.appspot.com",
-    messagingSenderId: "1047932101367"
   }
 };

@@ -10,8 +10,9 @@
     <li class="active"><a routerLink="/chat">Chat</a></li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/register">Register</a></li>
+      <li><a (click)="logout()" *ngIf="IsLoogedIn">Logout</a></li>
+    <li><a routerLink="/login" *ngIf="!IsLoogedIn">Login</a></li>
+    <li><a routerLink="/register" *ngIf="!IsLoogedIn">Register</a></li>
   </ul>
 </div>
 </nav>
